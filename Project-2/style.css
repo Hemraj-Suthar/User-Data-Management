@@ -1,0 +1,79 @@
+* {
+    box-sizing: border-box;
+}
+
+#searchInput {
+    background-image: url('/css/searchicon.png');
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #ddd;
+    margin-bottom: 12px;
+}
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: 50px auto 0;
+}
+
+table {
+    font-family: arial, sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+}
+
+td, th {
+    text-align: left;
+    padding: 8px;
+}
+
+h2 {
+    margin-left: 20px;
+}
+
+div#search-box {
+    width: 100%;
+}
+
+input[type="checkbox"] {
+    height: 20px;
+    width: 20px;
+    background-color: #eee;
+    margin-left: 20px;
+    margin-top: 9px;
+}
+
+
+.tableRow, #column_names {
+    border: 1px solid #ddd;
+}
+
+.tableRow:hover {
+    background-color: #90ee9038;
+    outline: 0;
+}
+
+.tableRow:nth-child(n+12) {
+    display: none;
+}
+.tableRow:nth-child(n+12) {
+    display: none;
+}
+.bottom-box {
+    width: 100%;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+}
+.delete_row_button {
+    background-color: Tomato;
+    border: none;
+    color: white;
+    padding: 10px;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 35px;
+    border-radius: 10px;
+}

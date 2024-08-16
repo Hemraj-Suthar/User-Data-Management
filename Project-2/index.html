@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div id="search-box">
+            <input type="text" id="searchInput" onkeyup="searchTableElements()" placeholder="Search by names, email or role." title="Type in a name, email or role.">
+        </div>
+        <table id="Admin_Table">
+            <tr id="column_names">
+                <th><input type="checkbox" id="select_all_checkbox" onclick="select_all_checkbox()"></th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Role</th>
+                <th>Action</th>
+            </tr>
+        </table>
+        <div class="bottom-box">
+            <button onclick="delete_seleted_row()" class="delete_row_button">Delete Selected</button>
+            <div id="pagination"></div>
+        </div>
+    </div>
+</body>
+</html>

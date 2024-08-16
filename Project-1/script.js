@@ -5,11 +5,10 @@ document.addEventListener('DOMContentLoaded', function() {
 
 function loadData(page = 1) {
     const xhr = new XMLHttpRequest();
-    xhr.open('GET', 'data.html', true); // Adjust URL if necessary
+    xhr.open('GET', 'data.html', true);
     xhr.onload = function() {
         if(this.status === 200) {
             const data = JSON.parse(this.responseText);
-            // console.log(data);
             populateTable(data, page);
             setupPagination(data.length);
         }
@@ -24,11 +23,8 @@ function populateTable(data, page) {
 
     const itemsPerPage = 10;
     const startIndex = (page - 1) * itemsPerPage;
-    // console.log(startIndex);
     const endIndex = startIndex + itemsPerPage;
-    // console.log(endIndex);
     const paginatedItems = data.slice(startIndex, endIndex);
-    // console.log(paginatedItems);
 
     paginatedItems.forEach((item, index) => {
         const row = tableBody.insertRow();
@@ -43,7 +39,6 @@ function populateTable(data, page) {
                 <span class="delete-btn" onclick="deleteRow(this)">Delete</span>
             </td>
         `;
-        // console.log(row);
     });
     
 }
