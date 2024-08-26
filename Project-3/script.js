@@ -96,6 +96,9 @@ function create_pagination(available_elements_count = null) {
         const pageButton = document.createElement('button');
         pageButton.innerText = pageNum;
         pageButton.id = `pageCount${pageNum}`;
+        if (pageNum === 1) {
+            pageButton.className = 'active';
+        }
         pageButton.onclick = () => showPage(pageNum);
         pagination.appendChild(pageButton);
         pagination.appendChild(document.createTextNode(' '));
@@ -103,6 +106,16 @@ function create_pagination(available_elements_count = null) {
 }
 
 function showPage(pageNumber) {
+    const paginationButtons = document.querySelectorAll('#pagination button');  
+    paginationButtons.forEach(button => {
+        const numericValue = button.id.replace('pageCount', '');
+        if (Number(numericValue) === pageNumber) {
+            button.classList.add('active');
+        } else {
+            button.classList.remove('active');
+        }
+    });
+    
     let rows = document.querySelectorAll('.tableRow');
     let start = (pageNumber - 1) * 10 + 1;
     let end = start + 10;
